@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #050811;
+    color: #e2e8f0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: rgba(255, 122, 0, 0.35);
+    color: #ffffff;
+  }
+  :focus-visible {
+    outline: 2px solid #ff7a00;
+    outline-offset: 2px;
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(9, 13, 24, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: #1d253f;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff7a00;
+}
+
+/* Main Dashboard Background with BG1 */
+.sunday-bg {
+  background-color: #050811;
+  background-image: 
+    linear-gradient(to bottom, rgba(5, 8, 17, 0.85) 0%, rgba(5, 8, 17, 0.95) 100%),
+    url('/assets/bg1.png');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Glassmorphism & Surface utilities */
+.glass-panel {
+  background: rgba(12, 17, 32, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-panel-glow {
+  background: rgba(13, 19, 36, 0.92);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 122, 0, 0.35);
+  box-shadow: 0 0 35px -10px rgba(255, 122, 0, 0.25);
+}
